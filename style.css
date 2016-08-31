@@ -10,6 +10,10 @@ button {
   border: 2px solid black;
 }
 
+.speechButton {
+  border: 2px solid black;
+}
+
 .row {
   margin-top: 5px;
 }

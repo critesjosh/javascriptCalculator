@@ -7,6 +7,7 @@ var firstLength;
 var secondNum;
 var operator;
 var result;
+var speechValue;
 
 $(document).ready(function() {
   $(".decimal").show();
@@ -259,11 +260,6 @@ $(document).ready(function() {
     }
   });
 
-  $("#test").click( function() {
-    console.log(operationsString);
-    $("#operationsDisplay").html(operationsString);
-  });
-
 });
 
 var defineFirstNum = function() {
@@ -280,9 +276,15 @@ if (!('webkitSpeechRecognition' in window)) {
 } else {
   var recognition = new webkitSpeechRecognition();
     recognition.onresult = function(event) {
+      console.log(event);
       if (event.results.length > 0) {
-        q.value = event.results[0][0].transcript;
-        q.form.submit();
+        speechValue = event.results[0][0].transcript;
+        speechValue = speechValue.replace("times", "*");
+        speechValue = speechValue.replace("divided by", "/");
+        $("#operationsDisplay").html(speechValue);
+        result = eval(speechValue);
+        $("#resultDislay").html(result);
+        console.log(speechValue);
       }
     };
   }
