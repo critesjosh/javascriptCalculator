@@ -1,0 +1,31 @@
+.calc {
+  border: 3px solid black;
+}
+
+.display {
+  background-color: lightgray;
+}
+
+button {
+  border: 2px solid black;
+}
+
+.row {
+  margin-top: 5px;
+}
+
+.buttons6{
+  margin-bottom: 5px;
+}
+
+#AC{
+  background-color: pink;
+}
+
+#resultDislay{
+  float: right;
+}
+
+#operationsDisplay{
+  float: right;
+}

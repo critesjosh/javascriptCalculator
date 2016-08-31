@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculate!</title>
+    <meta name="description" content="A calculator built with Javascript">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-offset-3 col-sm-6 calc">
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 display">
+              <p id="resultDislay">0</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 display">
+              <p id="operationsDisplay">0</p>
+            </div>
+          </div>
+          <div class="row text-center">
+            <div class="col-sm-10 col-sm-offset-1 buttons1">
+              <p>Calculate in:
+                <button id="binary" type="button">binary</button>
+                <button id="decimal" type="button">decimal</button>
+                <button id="hexadecimal" type="button">hexadecimal</button>
+              </p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-10 col-sm-offset-1 buttons2">
+              <button id="AC" type="button">clear all</button>
+              <button id="CE" type="button">clear entry</button>
+            </div>
+          </div>
+          <div class="binary">
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 buttons3">
+                <button class="1" type="button">1</button>
+                <button class="0" type="button">0</button>
+                <button class="point" type="button">.</button>
+                <button class="test" type="button">test</button>
+              </div>
+            </div>
+          </div>
+          <div class="decimal">
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons3">
+                  <button class="7" type="button">7</button>
+                  <button class="8" type="button">8</button>
+                  <button class="9" type="button">9</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons4">
+                  <button class="4" type="button">4</button>
+                  <button class="5" type="button">5</button>
+                  <button class="6" type="button">6</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons5">
+                  <button class="1" type="button">1</button>
+                  <button class="2" type="button">2</button>
+                  <button class="3" type="button">3</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons6">
+                  <button class="0" type="button">0</button>
+                  <button class="point" type="button">.</button>
+                  <button class="test" type="button">test</button>
+                </div>
+              </div>
+            </div>
+            <div class="hexadecimal">
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons3">
+                  <button class="d" type="button">D</button>
+                  <button class="e" type="button">E</button>
+                  <button class="f" type="button">F</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons3">
+                  <button class="a" type="button">A</button>
+                  <button class="b" type="button">B</button>
+                  <button class="c" type="button">C</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons3">
+                  <button class="7" type="button">7</button>
+                  <button class="8" type="button">8</button>
+                  <button class="9" type="button">9</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons4">
+                  <button class="4" type="button">4</button>
+                  <button class="5" type="button">5</button>
+                  <button class="6" type="button">6</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons5">
+                  <button class="1" type="button">1</button>
+                  <button class="2" type="button">2</button>
+                  <button class="3" type="button">3</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 buttons6">
+                  <button class="0" type="button">0</button>
+                  <button class="point" type="button">.</button>
+                  <button class="test" type="button">test</button>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-10 col-sm-offset-1 buttons6">
+                <button id="minus" type="button">-</button>
+                <button id="plus" type="button">+</button>
+                <button id="divide" type="button">/</button>
+                <button id="x" type="button">x</button>
+                <button id="equals" type="button">=</button>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 col-sm-offset-3 text-center">
+          <form action="http://www.google.com">
+            <input type="search" id="q" name="q" size="60">
+            <input type="button" value="Click to Speak" onclick="recognition.start()">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</html>
